@@ -295,7 +295,7 @@ class Client {
             app_id: [_validator.Assert.required(), _validator.Assert.string()],
             created_at: [_validator.Assert.required(), _validator.Assert.date()],
             notified: [_validator.Assert.required(), _validator.Assert.boolean()],
-            processed_at: _validator.Assert.callback(value => _validator.Assert.null().check(value) === true || _validator.Assert.date().check(value) === true),
+            processed_at: _validator.Assert.callback(value => _validator.Assert.null().check(value) === true || _validator.Assert.date().check(value) === true, 'Callback'),
             status: [_validator.Assert.required(), _validator.Assert.choice(['approved', 'denied', 'expired', 'pending'])],
             updated_at: [_validator.Assert.required(), _validator.Assert.date()],
             user_id: [_validator.Assert.required(), _validator.Assert.string()],
@@ -780,7 +780,7 @@ class Client {
         body: {
           approval_request: [_validator.Assert.required(), _validator.Assert.callback(value => {
             return _validator.Assert.string().check(value) === true || _validator.Assert.plainObject().check(value) === true;
-          })],
+          }, 'Callback')],
           authy_id: [_validator.Assert.required(), _validator.Assert.authyId()],
           callback_action: [_validator.Assert.required(), _validator.Assert.choice(['approval_request_status'])],
           device_uuid: [_validator.Assert.required(), _validator.Assert.string()],
@@ -790,7 +790,7 @@ class Client {
         },
         headers: {
           'x-authy-signature': [_validator.Assert.string(), _validator.Assert.Signature({ key: this.key, request: request })],
-          'x-authy-signature-nonce': [_validator.Assert.callback(value => _validator.Assert.integer().check(value) === true || _validator.Assert.string().check(value) === true)]
+          'x-authy-signature-nonce': [_validator.Assert.callback(value => _validator.Assert.integer().check(value) === true || _validator.Assert.string().check(value) === true, 'Callback')]
         },
         method: [_validator.Assert.required(), _validator.Assert.choice(['GET', 'POST'])],
         protocol: [_validator.Assert.required(), _validator.Assert.choice(['http', 'https'])],
