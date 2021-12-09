@@ -22,4 +22,4 @@ function uuid(a) {
  * Module dependencies.
  */
 
-module.exports = exports['default'];
+module.exports = exports.default;

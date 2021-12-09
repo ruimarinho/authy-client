@@ -204,7 +204,7 @@ export default class Client {
               app_id: [is.required(), is.string()],
               created_at: [is.required(), is.date()],
               notified: [is.required(), is.boolean()],
-              processed_at: is.callback(value => is.null().check(value) === true || is.date().check(value) === true),
+              processed_at: is.callback(value => is.null().check(value) === true || is.date().check(value) === true, 'Callback'),
               status: [is.required(), is.choice(['approved', 'denied', 'expired', 'pending'])],
               updated_at: [is.required(), is.date()],
               user_id: [is.required(), is.string()],
@@ -574,7 +574,7 @@ export default class Client {
         body: {
           approval_request: [is.required(), is.callback(value => {
             return is.string().check(value) === true || is.plainObject().check(value) === true;
-          })],
+          }, 'Callback')],
           authy_id: [is.required(), is.authyId()],
           callback_action: [is.required(), is.choice(['approval_request_status'])],
           device_uuid: [is.required(), is.string()],
@@ -584,7 +584,7 @@ export default class Client {
         },
         headers: {
           'x-authy-signature': [is.string(), is.Signature({ key: this.key, request })],
-          'x-authy-signature-nonce': [is.callback(value => is.integer().check(value) === true || is.string().check(value) === true)]
+          'x-authy-signature-nonce': [is.callback(value => is.integer().check(value) === true || is.string().check(value) === true, 'Callback')]
         },
         method: [is.required(), is.choice(['GET', 'POST'])],
         protocol: [is.required(), is.choice(['http', 'https'])],

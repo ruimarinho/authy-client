@@ -41,4 +41,4 @@ function parse(_ref) {
 
   return body;
 }
-module.exports = exports['default'];
+module.exports = exports.default;

@@ -13,4 +13,4 @@ exports.default = {
   command: 'onetouch <command>',
   describe: 'Manage onetouch requests'
 };
-module.exports = exports['default'];
+module.exports = exports.default;

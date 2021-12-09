@@ -30,4 +30,4 @@ class HttpError extends _standardError2.default {
   }
 }
 exports.default = HttpError;
-module.exports = exports['default'];
+module.exports = exports.default;

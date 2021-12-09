@@ -13,4 +13,4 @@ exports.default = {
   command: 'activity <command>',
   describe: 'Manage activity'
 };
-module.exports = exports['default'];
+module.exports = exports.default;

@@ -13,4 +13,4 @@ exports.default = {
   command: 'request <command>',
   describe: 'Request user token'
 };
-module.exports = exports['default'];
+module.exports = exports.default;

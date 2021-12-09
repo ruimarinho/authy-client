@@ -20,4 +20,4 @@ exports.default = StandardError;
  * Module dependencies.
  */
 
-module.exports = exports['default'];
+module.exports = exports.default;

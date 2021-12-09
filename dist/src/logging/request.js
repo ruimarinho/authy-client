@@ -45,4 +45,4 @@ exports.default = (0, _requestLogger2.default)(_request2.default, request => {
 
   log.debug({ request: request }, `Making request ${request.id} to ${request.method} ${request.uri}`);
 });
-module.exports = exports['default'];
+module.exports = exports.default;

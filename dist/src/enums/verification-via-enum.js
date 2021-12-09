@@ -12,4 +12,4 @@ exports.default = {
   CALL: 'call',
   SMS: 'sms'
 };
-module.exports = exports['default'];
+module.exports = exports.default;
