@@ -13,4 +13,4 @@ exports.default = {
   command: 'application <command>',
   describe: 'Manage application information'
 };
-module.exports = exports['default'];
+module.exports = exports.default;

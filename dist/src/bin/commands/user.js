@@ -13,4 +13,4 @@ exports.default = {
   command: 'user <command>',
   describe: 'Manage users'
 };
-module.exports = exports['default'];
+module.exports = exports.default;

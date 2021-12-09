@@ -29,4 +29,4 @@ class ValidationFailedError extends _httpError2.default {
   }
 }
 exports.default = ValidationFailedError;
-module.exports = exports['default'];
+module.exports = exports.default;

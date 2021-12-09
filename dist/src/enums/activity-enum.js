@@ -14,4 +14,4 @@ exports.default = {
   PASSWORD_RESET: 'password_reset',
   UNBANNED: 'unbanned'
 };
-module.exports = exports['default'];
+module.exports = exports.default;

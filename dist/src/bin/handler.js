@@ -36,4 +36,4 @@ exports.default = fn => {
   };
 };
 
-module.exports = exports['default'];
+module.exports = exports.default;

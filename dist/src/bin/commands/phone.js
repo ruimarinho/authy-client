@@ -13,4 +13,4 @@ exports.default = {
   command: 'phone <command>',
   describe: 'Manage phone verifications'
 };
-module.exports = exports['default'];
+module.exports = exports.default;

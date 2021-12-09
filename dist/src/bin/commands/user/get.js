@@ -13,4 +13,4 @@ exports.default = {
   command: 'get <command>',
   describe: 'View user information'
 };
-module.exports = exports['default'];
+module.exports = exports.default;

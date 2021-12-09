@@ -46,4 +46,4 @@ function localeAssert() {
 
   return this;
 }
-module.exports = exports['default'];
+module.exports = exports.default;
