@@ -46,6 +46,7 @@
     "debugnyan": "^1.0.0",
     "google-libphonenumber": "^3.2.1",
     "lodash": "^4.17.15",
+    "package.json": "^2.0.1",
     "prettyjson": "^1.2.1",
     "qs": "^6.2.1",
     "request": "^2.88.0",
